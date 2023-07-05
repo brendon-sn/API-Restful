@@ -1,0 +1,32 @@
+<br><br>
+<h1>Lista de Cursos <button type="button" class="btn btn-success" (click)="create()"><i class="fas fa-add"></i> Criar Curso</button></h1>
+<br>
+
+      
+
+<div class="table-responsive">
+<table class="table table-striped border border-top-0 align-middle text-center">
+  <thead class="table-dark"> 
+    <tr>
+      <th scope="col">Código</th>
+      <th scope="col">Descrição</th>
+      <th scope="col">Ementa</th>
+      <th scope="col">Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let curso of cursos " selectionMode="single" (click)="selecionarCurso(curso)">
+      <td>{{ curso.codigo }}</td>
+      <td>{{ curso.descricao }}</td>
+      <td>{{ curso.ementa }}</td>
+      <td>
+        <div class="btn-group" role="group" aria-label="Basic outlined example">
+          <button type="button" class="btn btn-outline-warning" (click)="atualizarCurso()"><i class="fas fa-edit"></i></button>
+          <button type="button" class="btn btn-outline-danger" (click)="excluirCurso()"><i class="fas fa-remove"></i></button>
+          
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>

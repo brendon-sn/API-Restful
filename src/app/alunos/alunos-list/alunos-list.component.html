@@ -1,0 +1,29 @@
+<br><br>
+<h1>Lista de Alunos
+  <button type="button" class="btn btn-success" (click)="create()"><i class="fas fa-add"></i> Novo Aluno</button> 
+</h1>
+<br><br>
+
+<div class="table-responsive">
+<table class="table table-striped border border-top-0 align-middle text-center">
+  <thead class="table-dark"> 
+    <tr>
+      <th scope="col">Código</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let aluno of alunos" (click)="selecionarAluno(aluno)">
+      <td>{{ aluno.codigo }}</td>
+      <td>{{ aluno.nome }}</td>
+      <td>
+        <div class="btn-group" role="group" aria-label="Basic outlined example">
+          <button type="button" class="btn btn-outline-warning"><i class="fas fa-edit"></i></button>
+          <button type="button" class="btn btn-outline-danger" (click)="excluirAluno()"><i class="fas fa-remove"></i></button>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>

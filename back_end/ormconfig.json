@@ -1,0 +1,13 @@
+{
+    "type": "postgres",
+    "username": "postgres",
+    "password": "admin",
+    "database": "postgres",
+    "schema": "testeVR",
+    "entities": ["./src/entities/*.ts"],
+    "migrations": ["./src/database/migrations/*.ts"],
+    "cli": {
+        "migrationsDir": "./src/database/migrations/",
+        "entitiesDir": "./src/entities/"
+    }
+}
